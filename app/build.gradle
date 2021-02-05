@@ -1,24 +1,45 @@
 apply plugin: 'com.android.application'
 
 android {
+	
     compileSdkVersion 29
     
-
     defaultConfig {
+		
         applicationId "ru.rx1310.app.houm"
+		
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+		
+        versionCode 210205
+        versionName "21.0-beta"
+		
     }
+	
     buildTypes {
+		
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+		
     }
+	
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
+	
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+	
+	implementation 'android.arch.core:common:+'
+	implementation 'android.arch.core:runtime:+'
+	
+	implementation 'com.android.support:support-v4:27.+'
+	implementation 'com.android.support:design:27.+'
+	implementation 'com.android.support:appcompat-v7:27.+'
+	
 }

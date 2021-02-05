@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<color name="colorAccent">#FF000000</color>
+	<color name="colorPrimary">@color/colorSurface</color> <!-- OLD VALUE: #FF2E2E2E --> 
+	<color name="colorPrimaryDark">@color/colorPrimary</color>
+	<color name="colorSurface">#FFF0F0F0</color>
+	<color name="colorWindow">#FFFFFFFF</color>
+	<color name="colorHover">#FF4A4A4A</color>
+	
+	<color name="colorAppAdaptiveIcon">@color/colorSurface</color>
+	<color name="colorPromtPreferenceBackground">@color/colorHover</color>
+	
+</resources>
