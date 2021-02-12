@@ -20,6 +20,11 @@
 		<item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
 		<item name="android:colorButtonNormal">@color/colorAccent</item>
 		
+		<item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+		
     </style>
 	
 	<style name="AppTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">

@@ -7,8 +7,12 @@
 	<color name="colorSurface">#FFF0F0F0</color>
 	<color name="colorWindow">#FFFFFFFF</color>
 	<color name="colorHover">#FF4A4A4A</color>
+	<color name="colorHint">#FF4A4A4A</color>
 	
 	<color name="colorAppAdaptiveIcon">@color/colorSurface</color>
 	<color name="colorPromtPreferenceBackground">@color/colorHover</color>
+	
+    <color name="colorPin">#FFFF00</color>
+    <color name="transparent">#00000000</color>
 	
 </resources>

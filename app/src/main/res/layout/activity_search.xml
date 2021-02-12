@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/masterLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<GridView
+		android:id="@+id/appsContainer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="0dp"
+		android:choiceMode="singleChoice"
+		android:clipToPadding="false"
+		android:columnWidth="@dimen/app_row_column_width"
+		android:fadingEdge="none"
+		android:gravity="center"
+		android:horizontalSpacing="@dimen/app_row_horizontal_spacing"
+		android:numColumns="@integer/app_grid_columns"
+		android:scrollbars="none"
+		android:stretchMode="columnWidth"
+		android:verticalSpacing="@dimen/app_row_vertical_spacing"/>
+
+	<LinearLayout
+		android:id="@+id/everything_on_top"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_margin="0dp"
+		android:orientation="vertical"
+		android:layout_gravity="bottom|center">
+
+		<View
+			android:id="@+id/statusBarDummyView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:visibility="visible"/>
+
+		<View
+			android:id="@+id/topFillerView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:visibility="gone"/>
+
+		<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+			android:layout_marginBottom="24dp"
+			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+			app:cardElevation="8dp"
+			app:cardCornerRadius="8dp">
+
+			<LinearLayout
+				android:id="@+id/customActionBar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<ImageButton
+					android:id="@+id/action_about"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_margin="16dp"
+					android:background="@null"
+					android:src="@drawable/ic_logo"
+					android:tint="@color/colorHint"/>
+
+				<EditText
+					android:id="@+id/editText1"
+					android:layout_width="0dip"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:background="@null"
+					android:ellipsize="end"
+					android:ems="10"
+					android:hint="@string/search_view_hint"
+					android:imeOptions="actionGo"
+					android:inputType="text"
+					android:selectAllOnFocus="true"
+					android:singleLine="true"
+					android:textColor="@android:color/black"
+					android:textColorHint="@color/colorHint"
+					android:textSize="18sp">
+
+					<requestFocus/>
+
+				</EditText>
+
+				<View
+					android:id="@+id/overflow_button_topleft"
+					android:layout_width="0dp"
+					android:layout_height="0dp"/>
+
+				<ImageButton
+					android:id="@+id/clear_button"
+					android:layout_width="40dp"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:background="@null"
+					android:onClick="onClickClearButton"
+					android:src="@drawable/ic_close"
+					android:tint="@color/colorHint"
+					android:visibility="gone"/>
+
+				<ImageButton
+					android:id="@+id/overflow_button"
+					android:layout_width="40dp"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:background="@android:color/transparent"
+					android:onClick="onClickSettingsButton"
+					android:src="@drawable/ic_more_vertical"
+					android:tint="@color/colorHint"/>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+
+		<View
+			android:id="@+id/bottomFillerView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:visibility="gone"/>
+
+	</LinearLayout>
+
+</FrameLayout>
+

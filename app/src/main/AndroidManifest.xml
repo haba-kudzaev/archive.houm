@@ -31,7 +31,7 @@
 			android:label="@string/app_name"
 			android:theme="@style/AppTheme.NoActionBar"
 			android:fitsSystemWindows="true"
-			android:name=".activity.MainActivity">
+			android:name=".activities.MainActivity">
 
 			<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,12 +45,12 @@
 		<activity
 			android:screenOrientation="portrait"
 			android:theme="@style/AppTheme.NoActionBar"
-			android:name=".activity.IntroActivity"/>
+			android:name=".activities.IntroActivity"/>
 
 		<activity
 			android:screenOrientation="portrait"
 			android:theme="@style/AppTheme.Preferences"
-			android:name=".activity.SettingsActivity">
+			android:name=".activities.SettingsActivity">
 
 			<intent-filter>
 
